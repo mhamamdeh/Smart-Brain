@@ -30,6 +30,6 @@ app.post('/imageUrl' , (req , res) => { image.handleImageUrl(req , res) })
 app.post('/signin' , signin.handleSignin(db , bcrypt))  //Anther way to call function (go to signin.js)
 app.post('/register' , register.handleRegister(db , bcrypt))    //Anther way to call function (go to register.js)
 
-app.listen(3001 , () => {
+app.listen(process.env.PORT || 3001 , () => {
     console.log('app is running on port 3001');
 });
